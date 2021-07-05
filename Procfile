@@ -1,2 +1,2 @@
-web: gunicorn gettingstarted.wsgi
+web: gunicorn djangoauth.wsgi
 release: python manage.py migrate
