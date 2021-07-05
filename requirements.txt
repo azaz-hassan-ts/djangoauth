@@ -1,0 +1,8 @@
+django
+gunicorn
+django-heroku
+django-cors-headers
+djangorestframework
+psycopg2
+pytz
+sqlparse
