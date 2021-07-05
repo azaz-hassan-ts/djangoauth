@@ -42,7 +42,16 @@ INSTALLED_APPS = [
     "hello",
     'corsheaders',
     'rest_framework',
+    'rest_auth',
+    'rest_framework.authtoken',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    'firstapp'
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -54,6 +63,24 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+       'rest_framework.authentication.TokenAuthentication',
+       # 'rest_framework.authentication.BasicAuthentication',
+       # 'rest_framework.authentication.SessionAuthentication',
+       
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_VERSIONING_CLASS': [
+        'rest_framework.versioning.NamespaceVersioning'
+    ],
+    'DEFAULT_VERSION': 'v1',
+    
+}
 
 ROOT_URLCONF = "djangoauth.urls"
 
