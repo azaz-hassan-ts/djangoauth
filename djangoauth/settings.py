@@ -75,11 +75,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
         'rest_framework.permissions.IsAuthenticated',
     ],
-    'DEFAULT_VERSIONING_CLASS': [
-        'rest_framework.versioning.NamespaceVersioning'
-    ],
-    'DEFAULT_VERSION': 'v1',
-
+    # 'DEFAULT_VERSIONING_CLASS': [
+    #     'rest_framework.versioning.NamespaceVersioning',
+    # ],
+    # 'DEFAULT_VERSION': [
+    #     'v1',
+    # ],
 }
 
 ROOT_URLCONF = "djangoauth.urls"

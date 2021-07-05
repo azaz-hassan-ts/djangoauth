@@ -5,6 +5,6 @@ from rest_framework.permissions import AllowAny
 
 # Create your views here.
 @api_view()
-#@permission_classes((AllowAny, ))
+@permission_classes((AllowAny, ))
 def first(request):
     return Response({'message': 'we received your request'})
