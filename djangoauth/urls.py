@@ -20,4 +20,3 @@ urlpatterns = [
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('firstapp/', include("firstapp.urls"))
 ]
- 
