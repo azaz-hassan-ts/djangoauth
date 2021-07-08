@@ -64,15 +64,25 @@ Enter data and send request to register user\
 ### How to login
 On Postman: Enter this URL: https://djangoauthbyazaz.herokuapp.com/rest-auth/login/ \
 Select POst, body, raw and json format\
-Use this json format:\
+Use this json format:
 ```
 {
     "username": "",
-    "email": "",
     "password": ""
 }
 ```
 Use the username, email and password used to register here and send request, it will send back a token which indicates, registration and login is successful. 
+
+### How to logout
+On Postman: Enter this URL: https://djangoauthbyazaz.herokuapp.com/rest-auth/logout/ \
+Select GET, body, raw and json format\
+Use this json format:
+```
+{
+    "key": ""
+}
+```
+Use the token returned by server on login/signup and paste it in value of key in above json format. It will send back succesful logout notification.
 
 ## Documentation
 
